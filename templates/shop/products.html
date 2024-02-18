@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe's webshop</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shop/styles/screen.css' %}">
+    <style>
+        .circular-image {
+            border-radius: 50%;
+            width: 100px; 
+            height: 100px; 
+        }
+    </style>
+</head>
+<body>
+    <img src="{% static 'shop/images/reasturant1.jpeg' %}" class="circular-image">
+    <h1>our product</h1>
+    <div class="product">
+        {% load html_formatters %}
+        {% for product in products %}
+            <div class="product">
+                <img src="{% static 'shop/images/no (2).jpeg' %}" class="circular-image">
+                <a href="{% url 'products' product.id %}">{{ product.name }},</a> {{ product.price|currency_dollar }}</div>
+            <p>{{ product.description }}</p>
+        {% endfor %}
+    </div>
+    </div>
+</body>
+</html>
+
+

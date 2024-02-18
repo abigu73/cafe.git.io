@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+    font-weight: 1cm;
+    margin: 0px auto;
+    width: 920px;
+}
+.logo {
+    width: 100px;
+}
+
+
+.product {
+    width: 160px;
+    text-align: center;
+    border-radius: 20px;
+    background-color:rgb(224, 179, 179);
+    display: inline-block;
+    overflow-x: auto;
+}
+
+
+.product img {
+    width: 150px;
+    height: 140px;
+    padding: 18px;
+    gap: 20px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    max-width: 100%; 
+  }
+  
